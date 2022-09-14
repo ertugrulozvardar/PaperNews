@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ReA-Ia-baO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Headlines View Controller-->
+        <scene sceneID="PMA-Eb-OLH">
+            <objects>
+                <viewController id="dEz-IN-6Ot" customClass="HeadlinesViewController" customModule="PaperNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nGL-r0-4Qk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cSW-bA-HM9">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DUE-n4-Xpz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cSW-bA-HM9" firstAttribute="top" secondItem="DUE-n4-Xpz" secondAttribute="top" id="VeU-GU-WhU"/>
+                            <constraint firstAttribute="bottom" secondItem="cSW-bA-HM9" secondAttribute="bottom" constant="34" id="XMU-I4-QRb"/>
+                            <constraint firstItem="cSW-bA-HM9" firstAttribute="leading" secondItem="DUE-n4-Xpz" secondAttribute="leading" id="Y00-bF-eoi"/>
+                            <constraint firstItem="DUE-n4-Xpz" firstAttribute="trailing" secondItem="cSW-bA-HM9" secondAttribute="trailing" id="i4R-bC-rN8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nY2-rf-gLi"/>
+                    <connections>
+                        <outlet property="headlinesTableView" destination="cSW-bA-HM9" id="1Rt-2r-Nxt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ptj-pT-ZZf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847.82608695652175" y="72.991071428571431"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="ZyB-Qa-wzN">
+            <objects>
+                <viewController storyboardIdentifier="NewsViewController" id="f0o-0I-IEe" customClass="NewsViewController" customModule="PaperNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X1U-Xx-60n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8v0-fb-35s">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="5" id="QVN-9z-eJD">
+                                    <size key="itemSize" width="180" height="400"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCollectionViewCell" id="kSV-pD-Qc3" customClass="NewsCollectionViewCell" customModule="PaperNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="400"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="q2O-jb-Oa0">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="400"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UYE-7k-bUY">
+                                                    <rect key="frame" x="0.0" y="95" width="200" height="175"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="175" id="MLS-FE-lTe"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GrimGrimoire OnceMore Will Be Released in English in Spring 2023" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wT-iv-Pmn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="90"/>
+                                                    <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="GrimGrimoire OnceMore, an HD Remaster of the original PS2 tactical RPG, will have an English release in the Spring of 2023" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnw-WG-lhw">
+                                                    <rect key="frame" x="0.0" y="292" width="200" height="108"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A52-Ob-ArF">
+                                                    <rect key="frame" x="0.0" y="275" width="200" height="12"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="A52-Ob-ArF" firstAttribute="top" secondItem="UYE-7k-bUY" secondAttribute="bottom" constant="5" id="1Vx-Ud-IX9"/>
+                                                <constraint firstItem="lnw-WG-lhw" firstAttribute="trailing" secondItem="UYE-7k-bUY" secondAttribute="trailing" id="3k7-Zb-Qhr"/>
+                                                <constraint firstItem="UYE-7k-bUY" firstAttribute="width" secondItem="q2O-jb-Oa0" secondAttribute="width" id="6Dw-9y-5J4"/>
+                                                <constraint firstItem="UYE-7k-bUY" firstAttribute="top" secondItem="8wT-iv-Pmn" secondAttribute="bottom" constant="5" id="88b-yS-Q8C"/>
+                                                <constraint firstItem="lnw-WG-lhw" firstAttribute="width" secondItem="UYE-7k-bUY" secondAttribute="width" id="9jv-KH-nRs"/>
+                                                <constraint firstAttribute="trailing" secondItem="lnw-WG-lhw" secondAttribute="trailing" id="CI3-W6-wod"/>
+                                                <constraint firstAttribute="bottom" secondItem="lnw-WG-lhw" secondAttribute="bottom" id="DcO-0R-e7S"/>
+                                                <constraint firstItem="8wT-iv-Pmn" firstAttribute="leading" secondItem="q2O-jb-Oa0" secondAttribute="leading" id="LAO-wy-uoG"/>
+                                                <constraint firstAttribute="trailing" secondItem="UYE-7k-bUY" secondAttribute="trailing" id="Tkt-Ay-r5Y"/>
+                                                <constraint firstItem="8wT-iv-Pmn" firstAttribute="leading" secondItem="UYE-7k-bUY" secondAttribute="leading" id="UvP-Bk-Exq"/>
+                                                <constraint firstItem="lnw-WG-lhw" firstAttribute="leading" secondItem="q2O-jb-Oa0" secondAttribute="leading" id="VLK-1P-aib"/>
+                                                <constraint firstAttribute="trailing" secondItem="A52-Ob-ArF" secondAttribute="trailing" id="VNy-h0-WxV"/>
+                                                <constraint firstItem="8wT-iv-Pmn" firstAttribute="top" secondItem="q2O-jb-Oa0" secondAttribute="top" id="VXv-mA-XSG"/>
+                                                <constraint firstItem="8wT-iv-Pmn" firstAttribute="trailing" secondItem="UYE-7k-bUY" secondAttribute="trailing" id="WSU-JL-yWt"/>
+                                                <constraint firstItem="lnw-WG-lhw" firstAttribute="top" secondItem="A52-Ob-ArF" secondAttribute="bottom" constant="5" id="WjD-iC-QHm"/>
+                                                <constraint firstItem="lnw-WG-lhw" firstAttribute="leading" secondItem="UYE-7k-bUY" secondAttribute="leading" id="a7u-hV-AEE"/>
+                                                <constraint firstItem="A52-Ob-ArF" firstAttribute="leading" secondItem="q2O-jb-Oa0" secondAttribute="leading" id="hGl-S4-lAl"/>
+                                                <constraint firstItem="UYE-7k-bUY" firstAttribute="leading" secondItem="q2O-jb-Oa0" secondAttribute="leading" id="ldT-SG-ZJx"/>
+                                                <constraint firstAttribute="trailing" secondItem="8wT-iv-Pmn" secondAttribute="trailing" id="sLg-Xd-tYz"/>
+                                                <constraint firstItem="8wT-iv-Pmn" firstAttribute="width" secondItem="UYE-7k-bUY" secondAttribute="width" id="uDE-9O-ZqM"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <size key="customSize" width="200" height="400"/>
+                                        <connections>
+                                            <outlet property="newsDescriptionLabel" destination="lnw-WG-lhw" id="mqH-Md-lQJ"/>
+                                            <outlet property="newsImageView" destination="UYE-7k-bUY" id="Mbw-2y-ZSJ"/>
+                                            <outlet property="newsPublicationDateLabel" destination="A52-Ob-ArF" id="Ch2-yC-WNa"/>
+                                            <outlet property="newsTitleLabel" destination="8wT-iv-Pmn" id="6Z9-Do-zlT"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EYx-WT-pG3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="newsCollectionView" destination="8v0-fb-35s" id="TWR-fZ-6ya"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P0c-xx-hxi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1802.8985507246377" y="72.991071428571431"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="D9C-ww-wrk">
+            <objects>
+                <tabBarController id="ReA-Ia-baO" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rJd-Ae-ZS4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pRc-XT-WyY" kind="relationship" relationship="viewControllers" id="64F-q6-ZtO"/>
+                        <segue destination="JdF-3a-30s" kind="relationship" relationship="viewControllers" id="Jlx-Mm-hXL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qGc-X5-CBw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1249" y="447"/>
+        </scene>
+        <!--Headlines-->
+        <scene sceneID="05R-FC-qXj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pRc-XT-WyY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Headlines" image="list.bullet.indent" catalog="system" id="Ow1-wC-S47"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BKo-nQ-NDI">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dEz-IN-6Ot" kind="relationship" relationship="rootViewController" id="GWr-6r-Ctx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jdp-NH-m3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62.318840579710148" y="72.991071428571431"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="PfU-LU-bPC">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="4Ju-R9-Wd8" customClass="SearchViewController" customModule="PaperNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4mv-mV-e2e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u4t-Ry-XdM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Thk-HS-akf">
+                                    <size key="itemSize" width="180" height="400"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCollectionViewCell" id="A3Z-sw-0PT" customClass="SearchCollectionViewCell" customModule="PaperNews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="400"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Evk-dQ-HxX">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="400"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iw1-qZ-4Ts">
+                                                    <rect key="frame" x="0.0" y="95" width="200" height="175"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="175" id="WQM-Bs-ICa"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GrimGrimoire OnceMore Will Be Released in English in Spring 2023" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTA-tA-5OI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="90"/>
+                                                    <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="GrimGrimoire OnceMore, an HD Remaster of the original PS2 tactical RPG, will have an English release in the Spring of 2023" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-Rl-6as">
+                                                    <rect key="frame" x="0.0" y="270" width="200" height="130"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZTA-tA-5OI" firstAttribute="width" secondItem="iw1-qZ-4Ts" secondAttribute="width" id="83D-CQ-ALz"/>
+                                                <constraint firstItem="FY9-Rl-6as" firstAttribute="leading" secondItem="iw1-qZ-4Ts" secondAttribute="leading" id="AmA-en-5Rc"/>
+                                                <constraint firstItem="ZTA-tA-5OI" firstAttribute="trailing" secondItem="iw1-qZ-4Ts" secondAttribute="trailing" id="BGh-DE-AQ5"/>
+                                                <constraint firstAttribute="bottom" secondItem="FY9-Rl-6as" secondAttribute="bottom" id="D5E-5h-NZ3"/>
+                                                <constraint firstItem="FY9-Rl-6as" firstAttribute="width" secondItem="iw1-qZ-4Ts" secondAttribute="width" id="HkI-qP-Dy0"/>
+                                                <constraint firstItem="iw1-qZ-4Ts" firstAttribute="leading" secondItem="Evk-dQ-HxX" secondAttribute="leading" id="LWM-6o-57t"/>
+                                                <constraint firstItem="FY9-Rl-6as" firstAttribute="trailing" secondItem="iw1-qZ-4Ts" secondAttribute="trailing" id="Ll3-6E-tQe"/>
+                                                <constraint firstItem="ZTA-tA-5OI" firstAttribute="leading" secondItem="Evk-dQ-HxX" secondAttribute="leading" id="Rxl-cT-xJx"/>
+                                                <constraint firstAttribute="trailing" secondItem="FY9-Rl-6as" secondAttribute="trailing" id="S0L-A7-1Yi"/>
+                                                <constraint firstItem="FY9-Rl-6as" firstAttribute="top" secondItem="iw1-qZ-4Ts" secondAttribute="bottom" id="TCt-x6-JdN"/>
+                                                <constraint firstItem="ZTA-tA-5OI" firstAttribute="top" secondItem="Evk-dQ-HxX" secondAttribute="top" id="boi-Tn-gfq"/>
+                                                <constraint firstItem="iw1-qZ-4Ts" firstAttribute="width" secondItem="Evk-dQ-HxX" secondAttribute="width" id="dMq-Gf-CLs"/>
+                                                <constraint firstItem="ZTA-tA-5OI" firstAttribute="leading" secondItem="iw1-qZ-4Ts" secondAttribute="leading" id="k4c-xV-psw"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZTA-tA-5OI" secondAttribute="trailing" id="mmF-Tn-n5B"/>
+                                                <constraint firstItem="FY9-Rl-6as" firstAttribute="leading" secondItem="Evk-dQ-HxX" secondAttribute="leading" id="obf-Xq-viT"/>
+                                                <constraint firstItem="iw1-qZ-4Ts" firstAttribute="top" secondItem="ZTA-tA-5OI" secondAttribute="bottom" constant="5" id="pDN-X9-HGB"/>
+                                                <constraint firstAttribute="trailing" secondItem="iw1-qZ-4Ts" secondAttribute="trailing" id="pcg-bb-CLA"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                        <size key="customSize" width="200" height="400"/>
+                                        <connections>
+                                            <outlet property="searchedNewsDescriptionLabel" destination="FY9-Rl-6as" id="6YW-MN-Dnf"/>
+                                            <outlet property="searchedNewsImageView" destination="iw1-qZ-4Ts" id="lGJ-Gb-AIN"/>
+                                            <outlet property="searchedNewsTitleLabel" destination="ZTA-tA-5OI" id="hwm-5U-ZOa"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ysk-zg-eBP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gZP-vv-8aa"/>
+                    <connections>
+                        <outlet property="searchedNewsCollectionView" destination="u4t-Ry-XdM" id="851-NP-b8O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1L-in-OaX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848" y="856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wjy-VN-jqB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JdF-3a-30s" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="3ka-UL-vDF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KFh-Ze-7W7">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4Ju-R9-Wd8" kind="relationship" relationship="rootViewController" id="4Zn-st-AR9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGu-X0-wFC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.bullet.indent" catalog="system" width="128" height="73"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
