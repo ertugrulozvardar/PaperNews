@@ -214,30 +214,39 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="GrimGrimoire OnceMore, an HD Remaster of the original PS2 tactical RPG, will have an English release in the Spring of 2023" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FY9-Rl-6as">
-                                                    <rect key="frame" x="0.0" y="270" width="200" height="130"/>
+                                                    <rect key="frame" x="0.0" y="292" width="200" height="108"/>
                                                     <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJt-mi-2kz">
+                                                    <rect key="frame" x="0.0" y="275" width="200" height="12"/>
+                                                    <fontDescription key="fontDescription" name="HoeflerText-Italic" family="Hoefler Text" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="mJt-mi-2kz" secondAttribute="trailing" id="7sQ-p8-mK1"/>
                                                 <constraint firstItem="ZTA-tA-5OI" firstAttribute="width" secondItem="iw1-qZ-4Ts" secondAttribute="width" id="83D-CQ-ALz"/>
                                                 <constraint firstItem="FY9-Rl-6as" firstAttribute="leading" secondItem="iw1-qZ-4Ts" secondAttribute="leading" id="AmA-en-5Rc"/>
                                                 <constraint firstItem="ZTA-tA-5OI" firstAttribute="trailing" secondItem="iw1-qZ-4Ts" secondAttribute="trailing" id="BGh-DE-AQ5"/>
                                                 <constraint firstAttribute="bottom" secondItem="FY9-Rl-6as" secondAttribute="bottom" id="D5E-5h-NZ3"/>
+                                                <constraint firstItem="FY9-Rl-6as" firstAttribute="top" secondItem="mJt-mi-2kz" secondAttribute="bottom" constant="5" id="DHE-oj-GiO"/>
                                                 <constraint firstItem="FY9-Rl-6as" firstAttribute="width" secondItem="iw1-qZ-4Ts" secondAttribute="width" id="HkI-qP-Dy0"/>
                                                 <constraint firstItem="iw1-qZ-4Ts" firstAttribute="leading" secondItem="Evk-dQ-HxX" secondAttribute="leading" id="LWM-6o-57t"/>
                                                 <constraint firstItem="FY9-Rl-6as" firstAttribute="trailing" secondItem="iw1-qZ-4Ts" secondAttribute="trailing" id="Ll3-6E-tQe"/>
                                                 <constraint firstItem="ZTA-tA-5OI" firstAttribute="leading" secondItem="Evk-dQ-HxX" secondAttribute="leading" id="Rxl-cT-xJx"/>
                                                 <constraint firstAttribute="trailing" secondItem="FY9-Rl-6as" secondAttribute="trailing" id="S0L-A7-1Yi"/>
-                                                <constraint firstItem="FY9-Rl-6as" firstAttribute="top" secondItem="iw1-qZ-4Ts" secondAttribute="bottom" id="TCt-x6-JdN"/>
                                                 <constraint firstItem="ZTA-tA-5OI" firstAttribute="top" secondItem="Evk-dQ-HxX" secondAttribute="top" id="boi-Tn-gfq"/>
+                                                <constraint firstItem="mJt-mi-2kz" firstAttribute="leading" secondItem="Evk-dQ-HxX" secondAttribute="leading" id="cjZ-34-eCx"/>
                                                 <constraint firstItem="iw1-qZ-4Ts" firstAttribute="width" secondItem="Evk-dQ-HxX" secondAttribute="width" id="dMq-Gf-CLs"/>
                                                 <constraint firstItem="ZTA-tA-5OI" firstAttribute="leading" secondItem="iw1-qZ-4Ts" secondAttribute="leading" id="k4c-xV-psw"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZTA-tA-5OI" secondAttribute="trailing" id="mmF-Tn-n5B"/>
                                                 <constraint firstItem="FY9-Rl-6as" firstAttribute="leading" secondItem="Evk-dQ-HxX" secondAttribute="leading" id="obf-Xq-viT"/>
                                                 <constraint firstItem="iw1-qZ-4Ts" firstAttribute="top" secondItem="ZTA-tA-5OI" secondAttribute="bottom" constant="5" id="pDN-X9-HGB"/>
                                                 <constraint firstAttribute="trailing" secondItem="iw1-qZ-4Ts" secondAttribute="trailing" id="pcg-bb-CLA"/>
+                                                <constraint firstItem="mJt-mi-2kz" firstAttribute="top" secondItem="iw1-qZ-4Ts" secondAttribute="bottom" constant="5" id="tDL-lp-ySW"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGray4Color"/>
@@ -245,6 +254,7 @@
                                         <connections>
                                             <outlet property="searchedNewsDescriptionLabel" destination="FY9-Rl-6as" id="6YW-MN-Dnf"/>
                                             <outlet property="searchedNewsImageView" destination="iw1-qZ-4Ts" id="lGJ-Gb-AIN"/>
+                                            <outlet property="searchedNewsPublicationDateLabel" destination="mJt-mi-2kz" id="9qz-pm-nIi"/>
                                             <outlet property="searchedNewsTitleLabel" destination="ZTA-tA-5OI" id="hwm-5U-ZOa"/>
                                         </connections>
                                     </collectionViewCell>
@@ -261,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1L-in-OaX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848" y="856"/>
+            <point key="canvasLocation" x="847.82608695652175" y="855.80357142857144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wjy-VN-jqB">

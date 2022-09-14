@@ -12,6 +12,7 @@ class SearchCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var searchedNewsTitleLabel: UILabel!
     @IBOutlet weak var searchedNewsImageView: UIImageView!
     @IBOutlet weak var searchedNewsDescriptionLabel: UILabel!
+    @IBOutlet weak var searchedNewsPublicationDateLabel: UILabel!
     
     var article: Article?
     
@@ -20,6 +21,6 @@ class SearchCollectionViewCell: UICollectionViewCell {
         searchedNewsImageView.kf.setImage(with: article.imageURL)
         searchedNewsTitleLabel.text = article.title
         searchedNewsDescriptionLabel.text = article.description
-        searchedNewsDescriptionLabel.text = article.publicationDate
+        searchedNewsPublicationDateLabel.text = article.publicationDate
     }
 }
