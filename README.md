@@ -9,7 +9,7 @@ You can access news;
 
 Demo of the application:
 
-https://drive.google.com/file/d/1fc40Wbzk_8RC5QpBq8B5eakWSKhNJ6Yc/view?usp=sharing
+https://drive.google.com/drive/folders/1JYZGyacKGAaGBR7kad097T1hNcHbhjKg?usp=sharing
 
 Screenshots:
 
