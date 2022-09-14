@@ -33,7 +33,6 @@ extension HeadlinesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HeadlinesTableViewCell.self), for: indexPath) as! HeadlinesTableViewCell
         let headlineTopic = headlines[indexPath.row]
-        print(headlineTopic)
         cell.configure(topic: headlineTopic)
         return cell
     }
