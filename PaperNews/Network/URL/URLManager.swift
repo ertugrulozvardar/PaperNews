@@ -11,7 +11,7 @@ struct URLManager {
     
     private let scheme = "https"
     private let host = "gnews.io"
-    private let newsAPIKey = "c2fee3deff2abfef513e006ab20347ce"
+    private let newsAPIKey = "YOUR_API_KEY_HERE"
     private var path: String?
     private var language: String?
     private var topic: String?
