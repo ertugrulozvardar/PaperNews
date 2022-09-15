@@ -7,12 +7,24 @@ You can access news;
 - Through selecting categories such as world, breaking-news, sports, health, etc. 
 - By performing a search with the query you want
 
+* You need to enter your own API-Key to retrieve the news from external API. 
+* The file path where you will enter your API key is: -> "Network/URL/URLManager.swift"
+* In order to get your own API-Key, you first need to create a free subscription to the GNews API. -> [https://gnews.io]
+
+## Technology and Structures
+- [x] MVC Design Pattern
+- [x] Auto layout
+- [X] RESTful API
+- [x] URLSession
+- [x] CollectionView 
+- [x] TableView 
+- [x] Web Services
+- [x] [Kingfisher](https://github.com/onevcat/Kingfisher)
+
 Demo of the application:
 
-https://drive.google.com/drive/folders/1JYZGyacKGAaGBR7kad097T1hNcHbhjKg?usp=sharing
+Part 1:
+https://user-images.githubusercontent.com/44060683/190376834-a3dabbf3-022a-41db-9442-7138d4dc3b39.mov
 
-Screenshots:
-
-![Simulator Screen Shot - iPhone 11 - 2022-09-14 at 16 02 45](https://user-images.githubusercontent.com/44060683/190161393-72c57140-3ec1-45b1-829c-18f88fddc19c.png)
-![Simulator Screen Shot - iPhone 11 - 2022-09-14 at 16 03 14](https://user-images.githubusercontent.com/44060683/190161456-d72074e3-1e9f-4c24-8d19-853ddece4b44.png)
-![Simulator Screen Shot - iPhone 11 - 2022-09-14 at 16 03 23](https://user-images.githubusercontent.com/44060683/190161475-f8ef8575-db4e-4b80-b48b-38adc7327778.png)
+Part 2:
+https://user-images.githubusercontent.com/44060683/190377073-096b5117-64c3-4a12-a118-30ef2e66f6f2.mov
